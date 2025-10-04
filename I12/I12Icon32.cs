@@ -39,7 +39,7 @@ namespace I12
         }
     }
 
-    public class I12Icon32Generic<T> : I12Icon16
+    public class I12Icon32Generic<T> : I12Icon32
     {
         private static bool isIconSourceInitialized;
         protected static readonly DrawingGroup iconSource = new();

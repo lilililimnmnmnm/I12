@@ -3,73 +3,41 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:i12="clr-namespace:I12;assembly=I12"
         Title="MainWindow" Height="320" Width="640" Background="#FF323232">
-    <StackPanel Orientation="Horizontal">
-        <StackPanel>
-            <Border Width="38" Height="38" Background="#FFF0F0F0" BorderBrush="#FF969696" BorderThickness="1" Margin="2" Padding="2">
-                <i12:I12Icon32 Icon="{x:Static i12:I12Icon32Convert1.IconSource}"/>
-            </Border>
-        </StackPanel>
-        <StackPanel>
-            <Border Width="32" Height="32" Background="#FFF0F0F0" BorderBrush="#FF969696" BorderThickness="1" Margin="2" Padding="2">
-                <i12:I12Icon24 Icon="{x:Static i12:I12Icon24Patient1.IconSource}"/>
-            </Border>
-            <Border Width="32" Height="32" Background="#FFF0F0F0" BorderBrush="#FF969696" BorderThickness="1" Margin="2" Padding="2">
-                <i12:I12Icon24 Icon="{x:Static i12:I12Icon24Box1.IconSource}"/>
-            </Border>
-            <Border Width="32" Height="32" Background="#FFF0F0F0" BorderBrush="#FF969696" BorderThickness="1" Margin="2" Padding="2">
-                <i12:I12Icon24 Icon="{x:Static i12:I12Icon24Image1.IconSource}"/>
-            </Border>
-            <Border Width="32" Height="32" Background="#FFF0F0F0" BorderBrush="#FF969696" BorderThickness="1" Margin="2" Padding="2">
-                <i12:I12Icon24 Icon="{x:Static i12:I12Icon24Directory1.IconSource}"/>
-            </Border>
-            <Border Width="32" Height="32" Background="#FFF0F0F0" BorderBrush="#FF969696" BorderThickness="1" Margin="2" Padding="2">
-                <i12:I12Icon24 Icon="{x:Static i12:I12Icon24History1.IconSource}"/>
-            </Border>
-            <Border Width="32" Height="32" Background="#FFF0F0F0" BorderBrush="#FF969696" BorderThickness="1" Margin="2" Padding="2">
-                <i12:I12Icon24 Icon="{x:Static i12:I12Icon24Setting1.IconSource}"/>
-            </Border>
-        </StackPanel>
-        <StackPanel>
-            <Border Width="32" Height="32" Background="#FFF0F0F0" BorderBrush="#FF969696" BorderThickness="1" Margin="2" Padding="2">
-                <i12:I12Icon24 Icon="{x:Static i12:I12Icon24Wait1.IconSource}"/>
-            </Border>
-            <Border Width="32" Height="32" Background="#FFF0F0F0" BorderBrush="#FF969696" BorderThickness="1" Margin="2" Padding="2">
-                <i12:I12Icon24 Icon="{x:Static i12:I12Icon24Skip1.IconSource}"/>
-            </Border>
-            <Border Width="32" Height="32" Background="#FFF0F0F0" BorderBrush="#FF969696" BorderThickness="1" Margin="2" Padding="2">
-                <i12:I12Icon24 Icon="{x:Static i12:I12Icon24Success1.IconSource}"/>
-            </Border>
-            <Border Width="32" Height="32" Background="#FFF0F0F0" BorderBrush="#FF969696" BorderThickness="1" Margin="2" Padding="2">
-                <i12:I12Icon24 Icon="{x:Static i12:I12Icon24Failure1.IconSource}"/>
-            </Border>
-        </StackPanel>
-        <StackPanel>
-            <Border Width="24" Height="24" Background="#FFF0F0F0" BorderBrush="#FF969696" BorderThickness="1" Margin="2" Padding="3">
-                <i12:I12Icon16 Icon="{x:Static i12:I12Icon16FilterCancel1.IconSource}"/>
-            </Border>
-            <Border Width="24" Height="24" Background="#FFF0F0F0" BorderBrush="#FF969696" BorderThickness="1" Margin="2" Padding="3">
-                <i12:I12Icon16 Icon="{x:Static i12:I12Icon16Calendar1.IconSource}"/>
-            </Border>
-            <Border Width="24" Height="24" Background="#FFF0F0F0" BorderBrush="#FF969696" BorderThickness="1" Margin="2" Padding="3">
-                <i12:I12Icon16 Icon="{x:Static i12:I12Icon16Box1.IconSource}"/>
-            </Border>
-            <Border Width="24" Height="24" Background="#FFF0F0F0" BorderBrush="#FF969696" BorderThickness="1" Margin="2" Padding="3">
-                <i12:I12Icon16 Icon="{x:Static i12:I12Icon16Image1.IconSource}"/>
-            </Border>
-            <Border Width="24" Height="24" Background="#FFF0F0F0" BorderBrush="#FF969696" BorderThickness="1" Margin="2" Padding="3">
-                <i12:I12Icon16 Icon="{x:Static i12:I12Icon16Directory1.IconSource}"/>
-            </Border>
-        </StackPanel>
-        <StackPanel>
-            <Border Width="24" Height="24" Background="#FF323232" BorderBrush="#FF969696" BorderThickness="1" Margin="2" Padding="3">
-                <i12:I12Icon16 Icon="{x:Static i12:I12Icon16User1.IconSource}"/>
-            </Border>
-            <Border Width="24" Height="24" Background="#FF323232" BorderBrush="#FF969696" BorderThickness="1" Margin="2" Padding="3">
-                <i12:I12Icon16 Icon="{x:Static i12:I12Icon16Password1.IconSource}"/>
-            </Border>
-            <Border Width="24" Height="24" Background="#FF323232" BorderBrush="#FF969696" BorderThickness="1" Margin="2" Padding="3">
-                <i12:I12Icon16 Icon="{x:Static i12:I12Icon16Login1.IconSource}"/>
-            </Border>
-        </StackPanel>
-    </StackPanel>
+    <Grid>
+        <DockPanel>
+            <i12:I12MessageControl1 DockPanel.Dock="Bottom" MouseDoubleClick="I12MessageControl1_MouseDoubleClick"/>
+            <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+                <StackPanel Background="#FFF0F0F0">
+                    <i12:I12Icon32Convert1 Margin="4"/>
+                </StackPanel>
+                <StackPanel Background="#FFF0F0F0">
+                    <i12:I12Icon24Patient1 Margin="4"/>
+                    <i12:I12Icon24Box1 Margin="4"/>
+                    <i12:I12Icon24Image1 Margin="4"/>
+                    <i12:I12Icon24Directory1 Margin="4"/>
+                    <i12:I12Icon24History1 Margin="4"/>
+                    <i12:I12Icon24Setting1 Margin="4"/>
+                </StackPanel>
+                <StackPanel Background="#FFF0F0F0">
+                    <i12:I12Icon24Wait1 Margin="4"/>
+                    <i12:I12Icon24Skip1 Margin="4"/>
+                    <i12:I12Icon24Success1 Margin="4"/>
+                    <i12:I12Icon24Failure1 Margin="4"/>
+                </StackPanel>
+                <StackPanel Background="#FFF0F0F0">
+                    <i12:I12Icon16FilterCancel1 Margin="4"/>
+                    <i12:I12Icon16Calendar1 Margin="4"/>
+                    <i12:I12Icon16Box1 Margin="4"/>
+                    <i12:I12Icon16Image1 Margin="4"/>
+                    <i12:I12Icon16Directory1 Margin="4"/>
+                </StackPanel>
+                <StackPanel Background="#FF323232">
+                    <i12:I12Icon16User1 Margin="4"/>
+                    <i12:I12Icon16Password1 Margin="4"/>
+                    <i12:I12Icon16Login1 Margin="4"/>
+                </StackPanel>
+            </StackPanel>
+        </DockPanel>
+        <i12:I12MessageControl2/>
+    </Grid>
 </Window>

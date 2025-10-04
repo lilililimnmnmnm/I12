@@ -3,7 +3,7 @@ using System.Windows.Media;
 
 namespace I12
 {
-    public class I12Icon32Convert1 : I12Icon24Generic<I12Icon32Convert1>
+    public class I12Icon32Convert1 : I12Icon32Generic<I12Icon32Convert1>
     {
         static I12Icon32Convert1()
         {
