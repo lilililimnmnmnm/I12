@@ -13,7 +13,7 @@ namespace I12
             SolidColorBrush solidColorBrush2 = new(Color.FromArgb(255, 255, 180, 0));
             solidColorBrush1.Freeze();
             solidColorBrush2.Freeze();
-            using (DrawingContext drawingContext = IconSource.Open())
+            using (DrawingContext drawingContext = iconSource.Open())
             {
                 StreamGeometry streamGeometry1 = new();
                 StreamGeometry streamGeometry2 = new();
@@ -32,7 +32,7 @@ namespace I12
                 drawingContext.DrawGeometry(solidColorBrush1, null, streamGeometry1);
                 drawingContext.DrawGeometry(solidColorBrush2, null, streamGeometry2);
             }
-            IconSource.Freeze();
+            iconSource.Freeze();
         }
     }
 }

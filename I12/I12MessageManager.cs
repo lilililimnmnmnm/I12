@@ -124,6 +124,7 @@ namespace I12
             controlTemplate.Seal();
             style.Setters.Add(new Setter(SnapsToDevicePixelsProperty, true));
             style.Setters.Add(new Setter(FocusableProperty, false));
+            style.Setters.Add(new Setter(IsTabStopProperty, false));
             style.Setters.Add(new Setter(BackgroundProperty, defaultBackgroundColor));
             style.Setters.Add(new Setter(BorderBrushProperty, defaultBorderColor));
             style.Setters.Add(new Setter(ForegroundProperty, defaultForegroundColor));
@@ -219,6 +220,7 @@ namespace I12
             style.Setters.Add(new Setter(SnapsToDevicePixelsProperty, true));
             style.Setters.Add(new Setter(OpacityProperty, 0.0));
             style.Setters.Add(new Setter(FocusableProperty, false));
+            style.Setters.Add(new Setter(IsTabStopProperty, false));
             style.Setters.Add(new Setter(BackgroundProperty, defaultBackgroundColor));
             style.Setters.Add(new Setter(BorderBrushProperty, defaultBorderColor));
             style.Setters.Add(new Setter(ForegroundProperty, defaultForegroundColor));

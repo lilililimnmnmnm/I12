@@ -9,13 +9,13 @@ namespace I12
         {
             SolidColorBrush solidColorBrush1 = new(Color.FromArgb(255, 127, 127, 127));
             solidColorBrush1.Freeze();
-            using (DrawingContext drawingContext = IconSource.Open())
+            using (DrawingContext drawingContext = iconSource.Open())
             {
                 drawingContext.DrawEllipse(solidColorBrush1, null, new Point(6, 12), 2, 2);
                 drawingContext.DrawEllipse(solidColorBrush1, null, new Point(12, 12), 2, 2);
                 drawingContext.DrawEllipse(solidColorBrush1, null, new Point(18, 12), 2, 2);
             }
-            IconSource.Freeze();
+            iconSource.Freeze();
         }
     }
 }

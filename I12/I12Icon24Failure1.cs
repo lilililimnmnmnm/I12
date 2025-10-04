@@ -11,12 +11,12 @@ namespace I12
             Pen pen1 = new(solidColorBrush1, 3);
             solidColorBrush1.Freeze();
             pen1.Freeze();
-            using (DrawingContext drawingContext = IconSource.Open())
+            using (DrawingContext drawingContext = iconSource.Open())
             {
                 drawingContext.DrawLine(pen1, new Point(6, 6), new Point(18, 18));
                 drawingContext.DrawLine(pen1, new Point(6, 18), new Point(18, 6));
             }
-            IconSource.Freeze();
+            iconSource.Freeze();
         }
     }
 }

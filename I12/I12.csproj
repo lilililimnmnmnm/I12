@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Resource Include="Shader\NegativeEffect.ps" />
+    <Resource Include="Shader\AddEffect.ps" />
   </ItemGroup>
 
 </Project>

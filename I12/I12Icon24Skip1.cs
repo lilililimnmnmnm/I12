@@ -10,7 +10,7 @@ namespace I12
             Point[] pointArray1 = [new Point(6, 6), new Point(6, 18), new Point(12, 14), new Point(12, 18), new Point(20, 12), new Point(12, 6), new Point(12, 10)];
             SolidColorBrush solidColorBrush1 = new(Color.FromArgb(255, 0, 170, 220));
             solidColorBrush1.Freeze();
-            using (DrawingContext drawingContext = IconSource.Open())
+            using (DrawingContext drawingContext = iconSource.Open())
             {
                 StreamGeometry streamGeometry1 = new();
                 using (StreamGeometryContext streamGeometryContext1 = streamGeometry1.Open())
@@ -21,7 +21,7 @@ namespace I12
                 streamGeometry1.Freeze();
                 drawingContext.DrawGeometry(solidColorBrush1, null, streamGeometry1);
             }
-            IconSource.Freeze();
+            iconSource.Freeze();
         }
     }
 }

@@ -12,7 +12,7 @@ namespace I12
             Pen pen1 = new(solidColorBrush1, 3);
             solidColorBrush1.Freeze();
             pen1.Freeze();
-            using (DrawingContext drawingContext = IconSource.Open())
+            using (DrawingContext drawingContext = iconSource.Open())
             {
                 StreamGeometry streamGeometry1 = new();
                 using (StreamGeometryContext streamGeometryContext1 = streamGeometry1.Open())
@@ -23,7 +23,7 @@ namespace I12
                 streamGeometry1.Freeze();
                 drawingContext.DrawGeometry(null, pen1, streamGeometry1);
             }
-            IconSource.Freeze();
+            iconSource.Freeze();
         }
     }
 }

@@ -15,7 +15,7 @@ namespace I12
             solidColorBrush2.Freeze();
             solidColorBrush3.Freeze();
             pen1.Freeze();
-            using (DrawingContext drawingContext = IconSource.Open())
+            using (DrawingContext drawingContext = iconSource.Open())
             {
                 StreamGeometry streamGeometry1 = new();
                 StreamGeometry streamGeometry2 = new();
@@ -57,7 +57,7 @@ namespace I12
                 drawingContext.DrawRectangle(solidColorBrush3, null, new Rect(17, 6, 5, 1));
                 drawingContext.DrawRectangle(solidColorBrush3, null, new Rect(19, 4, 1, 5));
             }
-            IconSource.Freeze();
+            iconSource.Freeze();
         }
     }
 }

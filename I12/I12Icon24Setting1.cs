@@ -41,7 +41,7 @@ namespace I12
             solidColorBrush2.Freeze();
             solidColorBrush3.Freeze();
             pen1.Freeze();
-            using (DrawingContext drawingContext = IconSource.Open())
+            using (DrawingContext drawingContext = iconSource.Open())
             {
                 StreamGeometry streamGeometry1 = new();
                 using (StreamGeometryContext streamGeometryContext1 = streamGeometry1.Open())
@@ -54,7 +54,7 @@ namespace I12
                 drawingContext.DrawEllipse(solidColorBrush1, null, new Point(12, 12), 9, 9);
                 drawingContext.DrawEllipse(solidColorBrush2, pen1, new Point(12, 12), 4, 4);
             }
-            IconSource.Freeze();
+            iconSource.Freeze();
         }
     }
 }
