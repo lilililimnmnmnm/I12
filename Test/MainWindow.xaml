@@ -58,7 +58,7 @@
                 </StackPanel>
                 <!-- Shader AddEffect -->
                 <Grid Background="#00000000">
-                    <StackPanel>
+                    <StackPanel x:Name="base">
                         <i12:I12Icon24Patient1 Margin="4"/>
                         <i12:I12Icon24Box1 Margin="4"/>
                         <i12:I12Icon24Image1 Margin="4"/>
