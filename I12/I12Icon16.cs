@@ -6,36 +6,25 @@ namespace I12
     public class I12Icon16 : FrameworkElement
     {
         private static readonly DrawingGroup drawingGroup = new();
-        private static readonly Style style = new(typeof(I12Icon16));
 
         static I12Icon16()
         {
             drawingGroup.Freeze();
-            style.Setters.Add(new Setter(SnapsToDevicePixelsProperty, true));
-            style.Setters.Add(new Setter(MinHeightProperty, 16.0));
-            style.Setters.Add(new Setter(MinWidthProperty, 16.0));
-            style.Setters.Add(new Setter(HeightProperty, 16.0));
-            style.Setters.Add(new Setter(WidthProperty, 16.0));
-            style.Seal();
-        }
-
-        public I12Icon16() : base()
-        {
-            Style = style;
         }
 
         public static readonly DependencyProperty IconProperty = DependencyProperty.Register(nameof(Icon), typeof(DrawingGroup), typeof(I12Icon16), new FrameworkPropertyMetadata(drawingGroup, FrameworkPropertyMetadataOptions.AffectsRender));
         public DrawingGroup Icon { get => (DrawingGroup)GetValue(IconProperty); set => SetValue(IconProperty, value); }
 
-        protected override void OnRender(DrawingContext drawingContext)
+        public I12Icon16() : base()
         {
-            base.OnRender(drawingContext);
-            drawingContext.DrawDrawing(Icon);
+            SnapsToDevicePixels = true;
+            Width = 16;
+            Height = 16;
         }
 
-        protected override Size MeasureOverride(Size availableSize)
+        protected override void OnRender(DrawingContext drawingContext)
         {
-            return new Size(16.0, 16.0);
+            drawingContext.DrawDrawing(Icon);
         }
     }
 
@@ -43,14 +32,15 @@ namespace I12
     {
         private static bool isIconSourceInitialized;
         protected static readonly DrawingGroup iconSource = new();
+
         public static DrawingGroup IconSource
         {
             get
             {
                 if (!isIconSourceInitialized)
                 {
-                    Activator.CreateInstance<T>();
                     isIconSourceInitialized = true;
+                    Activator.CreateInstance<T>();
                 }
                 return iconSource;
             }

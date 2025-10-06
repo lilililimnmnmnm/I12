@@ -3,12 +3,12 @@ using System.Windows.Media;
 
 namespace I12
 {
-    public class I12Icon24Success1 : I12Icon24Generic<I12Icon24Success1>
+    public class I12Icon24Confirm1 : I12Icon24Generic<I12Icon24Confirm1>
     {
-        static I12Icon24Success1()
+        static I12Icon24Confirm1()
         {
-            Point[] pointArray1 = [new Point(4, 12), new Point(9, 17), new Point(18, 8)];
-            SolidColorBrush solidColorBrush1 = new(Color.FromArgb(255, 50, 180, 120));
+            Point[] pointArray1 = [new Point(5, 11), new Point(10, 16), new Point(19, 7)];
+            SolidColorBrush solidColorBrush1 = new(Color.FromArgb(255, 50, 170, 120));
             Pen pen1 = new(solidColorBrush1, 3);
             solidColorBrush1.Freeze();
             pen1.Freeze();

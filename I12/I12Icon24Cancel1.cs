@@ -3,9 +3,9 @@ using System.Windows.Media;
 
 namespace I12
 {
-    public class I12Icon24Failure1 : I12Icon24Generic<I12Icon24Failure1>
+    public class I12Icon24Cancel1 : I12Icon24Generic<I12Icon24Cancel1>
     {
-        static I12Icon24Failure1()
+        static I12Icon24Cancel1()
         {
             SolidColorBrush solidColorBrush1 = new(Color.FromArgb(255, 255, 100, 100));
             Pen pen1 = new(solidColorBrush1, 3);

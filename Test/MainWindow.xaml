@@ -3,19 +3,21 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:i12="clr-namespace:I12;assembly=I12"
         xmlns:i12s="clr-namespace:I12.Shader;assembly=I12"
-        Title="MainWindow" Height="320" Width="640" Background="#FF323232">
+        Title="MainWindow" Height="320" Width="640" Background="#FFF0F0F0">
     <Grid>
         <DockPanel>
             <i12:I12MessageControl1 DockPanel.Dock="Bottom" MouseDoubleClick="I12MessageControl1_MouseDoubleClick"/>
             <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
                 <!-- 32px Icon -->
-                <StackPanel Background="#FFF0F0F0">
+                <StackPanel>
                     <i12:I12Icon32Convert1 Margin="4"/>
                     <i12:I12Icon32Directory1 Margin="4"/>
                     <i12:I12Icon32Search1 Margin="4"/>
+                    <i12:I12Icon32Confirm1 Margin="4"/>
+                    <i12:I12Icon32Cancel1 Margin="4"/>
                 </StackPanel>
                 <!-- 24px Icon -->
-                <StackPanel Background="#FFF0F0F0">
+                <StackPanel>
                     <i12:I12Icon24Patient1 Margin="4"/>
                     <i12:I12Icon24Box1 Margin="4"/>
                     <i12:I12Icon24Image1 Margin="4"/>
@@ -23,14 +25,14 @@
                     <i12:I12Icon24History1 Margin="4"/>
                     <i12:I12Icon24Setting1 Margin="4"/>
                 </StackPanel>
-                <StackPanel Background="#FFF0F0F0">
+                <StackPanel>
                     <i12:I12Icon24Wait1 Margin="4"/>
                     <i12:I12Icon24Skip1 Margin="4"/>
-                    <i12:I12Icon24Success1 Margin="4"/>
-                    <i12:I12Icon24Failure1 Margin="4"/>
+                    <i12:I12Icon24Confirm1 Margin="4"/>
+                    <i12:I12Icon24Cancel1 Margin="4"/>
                 </StackPanel>
                 <!-- 16px Icon -->
-                <StackPanel Background="#FFF0F0F0">
+                <StackPanel>
                     <i12:I12Icon16FilterCancel1 Margin="4"/>
                     <i12:I12Icon16Calendar1 Margin="4"/>
                     <i12:I12Icon16Box1 Margin="4"/>
@@ -55,19 +57,7 @@
                     <i12:I12Icon24Setting1 Margin="4"/>
                 </StackPanel>
                 <!-- Shader AddEffect -->
-                <Grid Background="#FFF0F0F0">
-                    <StackPanel ClipToBounds="True" x:Name="base" Opacity="0.5">
-                        <StackPanel.Effect>
-                            <BlurEffect Radius="8"/>
-                        </StackPanel.Effect>
-                        <i12:I12Icon24Patient1 Margin="4">
-                        </i12:I12Icon24Patient1>
-                        <i12:I12Icon24Box1 Margin="4"/>
-                        <i12:I12Icon24Image1 Margin="4"/>
-                        <i12:I12Icon24Directory1 Margin="4"/>
-                        <i12:I12Icon24History1 Margin="4"/>
-                        <i12:I12Icon24Setting1 Margin="4"/>
-                    </StackPanel>
+                <Grid Background="#00000000">
                     <StackPanel>
                         <i12:I12Icon24Patient1 Margin="4"/>
                         <i12:I12Icon24Box1 Margin="4"/>
