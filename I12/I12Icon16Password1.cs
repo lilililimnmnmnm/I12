@@ -14,12 +14,12 @@ namespace I12
             using (DrawingContext drawingContext = iconSource.Open())
             {
                 StreamGeometry streamGeometry1 = new();
-                using (StreamGeometryContext streamGeometryContext1 = streamGeometry1.Open())
+                using (StreamGeometryContext streamGeometryContext = streamGeometry1.Open())
                 {
-                    streamGeometryContext1.BeginFigure(new Point(5, 7), false, false);
-                    streamGeometryContext1.LineTo(new Point(5, 5), true, true);
-                    streamGeometryContext1.ArcTo(new Point(11, 5), new Size(3, 3), 0, false, SweepDirection.Clockwise, true, true);
-                    streamGeometryContext1.LineTo(new Point(11, 7), true, true);
+                    streamGeometryContext.BeginFigure(new Point(5, 7), false, false);
+                    streamGeometryContext.LineTo(new Point(5, 5), true, true);
+                    streamGeometryContext.ArcTo(new Point(11, 5), new Size(3, 3), 0, false, SweepDirection.Clockwise, true, true);
+                    streamGeometryContext.LineTo(new Point(11, 7), true, true);
                 }
                 streamGeometry1.Freeze();
                 drawingContext.DrawRoundedRectangle(solidColorBrush1, null, new Rect(3, 7, 10, 7), 1, 1);

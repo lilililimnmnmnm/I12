@@ -19,10 +19,10 @@ namespace I12
             using (DrawingContext drawingContext = iconSource.Open())
             {
                 StreamGeometry streamGeometry1 = new();
-                using (StreamGeometryContext streamGeometryContext1 = streamGeometry1.Open())
+                using (StreamGeometryContext streamGeometryContext = streamGeometry1.Open())
                 {
-                    streamGeometryContext1.BeginFigure(pointArray1[0], true, true);
-                    streamGeometryContext1.PolyLineTo(pointArray1, false, true);
+                    streamGeometryContext.BeginFigure(pointArray1[0], true, true);
+                    streamGeometryContext.PolyLineTo(pointArray1, false, true);
                 }
                 streamGeometry1.Freeze();
                 drawingContext.DrawRectangle(solidColorBrush1, null, new Rect(1, 2, 14, 12));

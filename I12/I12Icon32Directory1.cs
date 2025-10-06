@@ -17,15 +17,15 @@ namespace I12
             {
                 StreamGeometry streamGeometry1 = new();
                 StreamGeometry streamGeometry2 = new();
-                using (StreamGeometryContext streamGeometryContext1 = streamGeometry1.Open())
+                using (StreamGeometryContext streamGeometryContext = streamGeometry1.Open())
                 {
-                    streamGeometryContext1.BeginFigure(pointArray1[0], true, true);
-                    streamGeometryContext1.PolyLineTo(pointArray1, false, true);
+                    streamGeometryContext.BeginFigure(pointArray1[0], true, true);
+                    streamGeometryContext.PolyLineTo(pointArray1, false, true);
                 }
-                using (StreamGeometryContext streamGeometryContext2 = streamGeometry2.Open())
+                using (StreamGeometryContext streamGeometryContext = streamGeometry2.Open())
                 {
-                    streamGeometryContext2.BeginFigure(pointArray2[0], true, true);
-                    streamGeometryContext2.PolyLineTo(pointArray2, false, true);
+                    streamGeometryContext.BeginFigure(pointArray2[0], true, true);
+                    streamGeometryContext.PolyLineTo(pointArray2, false, true);
                 }
                 streamGeometry1.Freeze();
                 streamGeometry2.Freeze();

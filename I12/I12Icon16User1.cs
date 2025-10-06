@@ -12,14 +12,14 @@ namespace I12
             using (DrawingContext drawingContext = iconSource.Open())
             {
                 StreamGeometry streamGeometry1 = new();
-                using (StreamGeometryContext streamGeometryContext1 = streamGeometry1.Open())
+                using (StreamGeometryContext streamGeometryContext = streamGeometry1.Open())
                 {
-                    streamGeometryContext1.BeginFigure(new Point(3, 12), true, true);
-                    streamGeometryContext1.ArcTo(new Point(13, 12), new Size(5, 5), 0, false, SweepDirection.Clockwise, false, true);
-                    streamGeometryContext1.ArcTo(new Point(13, 13), new Size(5, 5), 0, false, SweepDirection.Clockwise, false, true);
-                    streamGeometryContext1.ArcTo(new Point(12, 14), new Size(1, 1), 0, false, SweepDirection.Clockwise, false, true);
-                    streamGeometryContext1.LineTo(new Point(4, 14), false, true);
-                    streamGeometryContext1.ArcTo(new Point(3, 13), new Size(1, 1), 0, false, SweepDirection.Clockwise, false, true);
+                    streamGeometryContext.BeginFigure(new Point(3, 12), true, true);
+                    streamGeometryContext.ArcTo(new Point(13, 12), new Size(5, 5), 0, false, SweepDirection.Clockwise, false, true);
+                    streamGeometryContext.ArcTo(new Point(13, 13), new Size(5, 5), 0, false, SweepDirection.Clockwise, false, true);
+                    streamGeometryContext.ArcTo(new Point(12, 14), new Size(1, 1), 0, false, SweepDirection.Clockwise, false, true);
+                    streamGeometryContext.LineTo(new Point(4, 14), false, true);
+                    streamGeometryContext.ArcTo(new Point(3, 13), new Size(1, 1), 0, false, SweepDirection.Clockwise, false, true);
                 }
                 streamGeometry1.Freeze();
                 drawingContext.DrawEllipse(solidColorBrush1, null, new Point(8, 5), 3, 3);

@@ -19,23 +19,23 @@ namespace I12
             {
                 StreamGeometry streamGeometry1 = new();
                 StreamGeometry streamGeometry2 = new();
-                using (StreamGeometryContext streamGeometryContext1 = streamGeometry1.Open())
+                using (StreamGeometryContext streamGeometryContext = streamGeometry1.Open())
                 {
-                    streamGeometryContext1.BeginFigure(new Point(0, 3.5), true, true);
-                    streamGeometryContext1.ArcTo(new Point(1.5, 2), new Size(1.5, 1.5), 0, false, SweepDirection.Clockwise, false, true);
-                    streamGeometryContext1.LineTo(new Point(14.5, 2), false, true);
-                    streamGeometryContext1.ArcTo(new Point(16, 3.5), new Size(1.5, 1.5), 0, false, SweepDirection.Clockwise, false, true);
-                    streamGeometryContext1.LineTo(new Point(16, 6), false, true);
-                    streamGeometryContext1.LineTo(new Point(0, 6), false, true);
+                    streamGeometryContext.BeginFigure(new Point(0, 3.5), true, true);
+                    streamGeometryContext.ArcTo(new Point(1.5, 2), new Size(1.5, 1.5), 0, false, SweepDirection.Clockwise, false, true);
+                    streamGeometryContext.LineTo(new Point(14.5, 2), false, true);
+                    streamGeometryContext.ArcTo(new Point(16, 3.5), new Size(1.5, 1.5), 0, false, SweepDirection.Clockwise, false, true);
+                    streamGeometryContext.LineTo(new Point(16, 6), false, true);
+                    streamGeometryContext.LineTo(new Point(0, 6), false, true);
                 }
-                using (StreamGeometryContext streamGeometryContext2 = streamGeometry2.Open())
+                using (StreamGeometryContext streamGeometryContext = streamGeometry2.Open())
                 {
-                    streamGeometryContext2.BeginFigure(new Point(0, 6), true, true);
-                    streamGeometryContext2.LineTo(new Point(16, 6), false, true);
-                    streamGeometryContext2.LineTo(new Point(16, 14.5), false, true);
-                    streamGeometryContext2.ArcTo(new Point(14.5, 16), new Size(1.5, 1.5), 0, false, SweepDirection.Clockwise, false, true);
-                    streamGeometryContext2.LineTo(new Point(1.5, 16), false, true);
-                    streamGeometryContext2.ArcTo(new Point(0, 14.5), new Size(1.5, 1.5), 0, false, SweepDirection.Clockwise, false, true);
+                    streamGeometryContext.BeginFigure(new Point(0, 6), true, true);
+                    streamGeometryContext.LineTo(new Point(16, 6), false, true);
+                    streamGeometryContext.LineTo(new Point(16, 14.5), false, true);
+                    streamGeometryContext.ArcTo(new Point(14.5, 16), new Size(1.5, 1.5), 0, false, SweepDirection.Clockwise, false, true);
+                    streamGeometryContext.LineTo(new Point(1.5, 16), false, true);
+                    streamGeometryContext.ArcTo(new Point(0, 14.5), new Size(1.5, 1.5), 0, false, SweepDirection.Clockwise, false, true);
                 }
                 streamGeometry1.Freeze();
                 streamGeometry2.Freeze();

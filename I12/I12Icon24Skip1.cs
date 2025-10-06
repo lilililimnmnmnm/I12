@@ -13,10 +13,10 @@ namespace I12
             using (DrawingContext drawingContext = iconSource.Open())
             {
                 StreamGeometry streamGeometry1 = new();
-                using (StreamGeometryContext streamGeometryContext1 = streamGeometry1.Open())
+                using (StreamGeometryContext streamGeometryContext = streamGeometry1.Open())
                 {
-                    streamGeometryContext1.BeginFigure(pointArray1[0], true, true);
-                    streamGeometryContext1.PolyLineTo(pointArray1, true, false);
+                    streamGeometryContext.BeginFigure(pointArray1[0], true, true);
+                    streamGeometryContext.PolyLineTo(pointArray1, false, false);
                 }
                 streamGeometry1.Freeze();
                 drawingContext.DrawGeometry(solidColorBrush1, null, streamGeometry1);

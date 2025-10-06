@@ -26,10 +26,13 @@
                     <i12:I12Icon24Setting1 Margin="4"/>
                 </StackPanel>
                 <StackPanel>
-                    <i12:I12Icon24Wait1 Margin="4"/>
-                    <i12:I12Icon24Skip1 Margin="4"/>
-                    <i12:I12Icon24Confirm1 Margin="4"/>
-                    <i12:I12Icon24Cancel1 Margin="4"/>
+                    <i12:I12Icon24Wait1 Margin="2"/>
+                    <i12:I12Icon24Skip1 Margin="2"/>
+                    <i12:I12Icon24Confirm1 Margin="2"/>
+                    <i12:I12Icon24Cancel1 Margin="2"/>
+                    <i12:I12Icon24Reset1 Margin="2"/>
+                    <i12:I12Icon24ZoomIn1 Margin="2"/>
+                    <i12:I12Icon24ZoomOut1 Margin="2"/>
                 </StackPanel>
                 <!-- 16px Icon -->
                 <StackPanel>
@@ -38,6 +41,7 @@
                     <i12:I12Icon16Box1 Margin="4"/>
                     <i12:I12Icon16Image1 Margin="4"/>
                     <i12:I12Icon16Directory1 Margin="4"/>
+                    <i12:I12Icon16Reset1 Margin="4"/>
                 </StackPanel>
                 <StackPanel Background="#FF323232">
                     <i12:I12Icon16User1 Margin="4"/>
