@@ -3,98 +3,170 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:i12="clr-namespace:I12;assembly=I12"
         xmlns:i12s="clr-namespace:I12.Shader;assembly=I12"
-        Title="MainWindow" Height="320" Width="640" Background="#FFF0F0F0">
+        Title="MainWindow" Height="480" Width="720" Background="#FFF0F0F0">
     <Grid>
         <DockPanel>
-            <i12:I12MessageControl1 DockPanel.Dock="Bottom" MouseDoubleClick="I12MessageControl1_MouseDoubleClick"/>
-            <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
-                <!-- 32px Icon -->
-                <StackPanel>
-                    <i12:I12Icon32Convert1 Margin="4"/>
-                    <i12:I12Icon32Directory1 Margin="4"/>
-                    <i12:I12Icon32Search1 Margin="4"/>
-                    <i12:I12Icon32Confirm1 Margin="4"/>
-                    <i12:I12Icon32Cancel1 Margin="4"/>
-                </StackPanel>
-                <!-- 24px Icon -->
-                <StackPanel>
-                    <i12:I12Icon24Patient1 Margin="4"/>
-                    <i12:I12Icon24Box1 Margin="4"/>
-                    <i12:I12Icon24Image1 Margin="4"/>
-                    <i12:I12Icon24Directory1 Margin="4"/>
-                    <i12:I12Icon24History1 Margin="4"/>
-                    <i12:I12Icon24Setting1 Margin="4"/>
-                </StackPanel>
-                <StackPanel>
-                    <i12:I12Icon24Wait1 Margin="2"/>
-                    <i12:I12Icon24Skip1 Margin="2"/>
-                    <i12:I12Icon24Confirm1 Margin="2"/>
-                    <i12:I12Icon24Cancel1 Margin="2"/>
-                    <i12:I12Icon24Reset1 Margin="2"/>
-                    <i12:I12Icon24ZoomIn1 Margin="2"/>
-                    <i12:I12Icon24ZoomOut1 Margin="2"/>
-                </StackPanel>
-                <!-- 16px Icon -->
-                <StackPanel>
-                    <i12:I12Icon16FilterCancel1 Margin="4"/>
-                    <i12:I12Icon16Calendar1 Margin="4"/>
-                    <i12:I12Icon16Box1 Margin="4"/>
-                    <i12:I12Icon16Image1 Margin="4"/>
-                    <i12:I12Icon16Directory1 Margin="4"/>
-                    <i12:I12Icon16Reset1 Margin="4"/>
-                </StackPanel>
-                <StackPanel Background="#FF323232">
-                    <i12:I12Icon16User1 Margin="4"/>
-                    <i12:I12Icon16Password1 Margin="4"/>
-                    <i12:I12Icon16Login1 Margin="4"/>
-                </StackPanel>
-                <!-- Shader NegativeEffect -->
-                <StackPanel Background="#FFF0F0F0">
-                    <StackPanel.Effect>
-                        <i12s:NegativeEffect/>
-                    </StackPanel.Effect>
-                    <i12:I12Icon24Patient1 Margin="4"/>
-                    <i12:I12Icon24Box1 Margin="4"/>
-                    <i12:I12Icon24Image1 Margin="4"/>
-                    <i12:I12Icon24Directory1 Margin="4"/>
-                    <i12:I12Icon24History1 Margin="4"/>
-                    <i12:I12Icon24Setting1 Margin="4"/>
-                </StackPanel>
-                <!-- Shader AddEffect -->
-                <Grid Background="#00000000">
-                    <StackPanel x:Name="base">
-                        <i12:I12Icon24Patient1 Margin="4"/>
-                        <i12:I12Icon24Box1 Margin="4"/>
-                        <i12:I12Icon24Image1 Margin="4"/>
-                        <i12:I12Icon24Directory1 Margin="4"/>
-                        <i12:I12Icon24History1 Margin="4"/>
-                        <i12:I12Icon24Setting1 Margin="4"/>
+            <i12:I12MessageControl1 DockPanel.Dock="Bottom"/>
+            <i12:I12TabControl1>
+                <i12:I12TabItem1 Header="32px Icon">
+                    <StackPanel>
+                        <Border SnapsToDevicePixels="True" Background="#FFF5F5F5" BorderBrush="#FFC8C8C8" BorderThickness="0,0,0,1">
+                            <StackPanel Orientation="Horizontal">
+                                <i12:I12Icon24Box1 VerticalAlignment="Center" Margin="12,6"/>
+                                <TextBlock VerticalAlignment="Center" Margin="0,6" FontSize="13" Text="32px Icon"/>
+                            </StackPanel>
+                        </Border>
+                        <StackPanel Orientation="Horizontal">
+                            <i12:I12Icon32Convert1 Margin="4"/>
+                            <i12:I12Icon32Directory1 Margin="4"/>
+                            <i12:I12Icon32Search1 Margin="4"/>
+                            <i12:I12Icon32Confirm1 Margin="4"/>
+                            <i12:I12Icon32Cancel1 Margin="4"/>
+                        </StackPanel>
                     </StackPanel>
-                    <Grid.Effect>
-                        <i12s:AddEffect>
-                            <i12s:AddEffect.S1>
-                                <VisualBrush>
-                                    <VisualBrush.Visual>
-                                        <StackPanel Background="#00000000" ClipToBounds="True" Opacity="0.5"
+                </i12:I12TabItem1>
+                <i12:I12TabItem1 Header="24px Icon">
+                    <StackPanel>
+                        <Border SnapsToDevicePixels="True" Background="#FFF5F5F5" BorderBrush="#FFC8C8C8" BorderThickness="0,0,0,1">
+                            <StackPanel Orientation="Horizontal">
+                                <i12:I12Icon24Box1 VerticalAlignment="Center" Margin="12,6"/>
+                                <TextBlock VerticalAlignment="Center" Margin="0,6" FontSize="13" Text="32px Icon"/>
+                            </StackPanel>
+                        </Border>
+                        <StackPanel Orientation="Horizontal">
+                            <i12:I12Icon24Patient1 Margin="4"/>
+                            <i12:I12Icon24Box1 Margin="4"/>
+                            <i12:I12Icon24Image1 Margin="4"/>
+                            <i12:I12Icon24Directory1 Margin="4"/>
+                            <i12:I12Icon24History1 Margin="4"/>
+                            <i12:I12Icon24Setting1 Margin="4"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <i12:I12Icon24Wait1 Margin="4"/>
+                            <i12:I12Icon24Skip1 Margin="4"/>
+                            <i12:I12Icon24Confirm1 Margin="4"/>
+                            <i12:I12Icon24Cancel1 Margin="4"/>
+                            <i12:I12Icon24Reset1 Margin="4"/>
+                            <i12:I12Icon24ZoomIn1 Margin="4"/>
+                            <i12:I12Icon24ZoomOut1 Margin="4"/>
+                        </StackPanel>
+                        <!-- Shader NegativeEffect -->
+                        <StackPanel Orientation="Horizontal" Background="#FFF0F0F0">
+                            <StackPanel.Effect>
+                                <i12s:NegativeEffect/>
+                            </StackPanel.Effect>
+                            <i12:I12Icon24Patient1 Margin="4"/>
+                            <i12:I12Icon24Box1 Margin="4"/>
+                            <i12:I12Icon24Image1 Margin="4"/>
+                            <i12:I12Icon24Directory1 Margin="4"/>
+                            <i12:I12Icon24History1 Margin="4"/>
+                            <i12:I12Icon24Setting1 Margin="4"/>
+                        </StackPanel>
+                        <!-- Shader AddEffect -->
+                        <Grid Background="#00000000">
+                            <StackPanel Orientation="Horizontal" x:Name="base">
+                                <i12:I12Icon24Patient1 Margin="4"/>
+                                <i12:I12Icon24Box1 Margin="4"/>
+                                <i12:I12Icon24Image1 Margin="4"/>
+                                <i12:I12Icon24Directory1 Margin="4"/>
+                                <i12:I12Icon24History1 Margin="4"/>
+                                <i12:I12Icon24Setting1 Margin="4"/>
+                            </StackPanel>
+                            <Grid.Effect>
+                                <i12s:AddEffect>
+                                    <i12s:AddEffect.S1>
+                                        <VisualBrush>
+                                            <VisualBrush.Visual>
+                                                <StackPanel Orientation="Horizontal" Background="#00000000" ClipToBounds="True" Opacity="0.5"
                                                     Height="{Binding ElementName=base, Path=ActualHeight}"
                                                     Width="{Binding ElementName=base, Path=ActualWidth}">
-                                            <StackPanel.Effect>
-                                                <BlurEffect Radius="8"/>
-                                            </StackPanel.Effect>
-                                            <i12:I12Icon24Patient1 Margin="4"/>
-                                            <i12:I12Icon24Box1 Margin="4"/>
-                                            <i12:I12Icon24Image1 Margin="4"/>
-                                            <i12:I12Icon24Directory1 Margin="4"/>
-                                            <i12:I12Icon24History1 Margin="4"/>
-                                            <i12:I12Icon24Setting1 Margin="4"/>
-                                        </StackPanel>
-                                    </VisualBrush.Visual>
-                                </VisualBrush>
-                            </i12s:AddEffect.S1>
-                        </i12s:AddEffect>
-                    </Grid.Effect>
-                </Grid>
-            </StackPanel>
+                                                    <StackPanel.Effect>
+                                                        <BlurEffect Radius="8"/>
+                                                    </StackPanel.Effect>
+                                                    <i12:I12Icon24Patient1 Margin="4"/>
+                                                    <i12:I12Icon24Box1 Margin="4"/>
+                                                    <i12:I12Icon24Image1 Margin="4"/>
+                                                    <i12:I12Icon24Directory1 Margin="4"/>
+                                                    <i12:I12Icon24History1 Margin="4"/>
+                                                    <i12:I12Icon24Setting1 Margin="4"/>
+                                                </StackPanel>
+                                            </VisualBrush.Visual>
+                                        </VisualBrush>
+                                    </i12s:AddEffect.S1>
+                                </i12s:AddEffect>
+                            </Grid.Effect>
+                        </Grid>
+                    </StackPanel>
+                </i12:I12TabItem1>
+                <i12:I12TabItem1 Header="16px Icon">
+                    <StackPanel>
+                        <Border SnapsToDevicePixels="True" Background="#FFF5F5F5" BorderBrush="#FFC8C8C8" BorderThickness="0,0,0,1">
+                            <StackPanel Orientation="Horizontal">
+                                <i12:I12Icon24Box1 VerticalAlignment="Center" Margin="12,6"/>
+                                <TextBlock VerticalAlignment="Center" Margin="0,6" FontSize="13" Text="16px Icon"/>
+                            </StackPanel>
+                        </Border>
+                        <StackPanel Orientation="Horizontal">
+                            <i12:I12Icon16FilterCancel1 Margin="4"/>
+                            <i12:I12Icon16Calendar1 Margin="4"/>
+                            <i12:I12Icon16Box1 Margin="4"/>
+                            <i12:I12Icon16Image1 Margin="4"/>
+                            <i12:I12Icon16Directory1 Margin="4"/>
+                            <i12:I12Icon16Reset1 Margin="4"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Background="#FF323232">
+                            <i12:I12Icon16User1 Margin="4"/>
+                            <i12:I12Icon16Password1 Margin="4"/>
+                            <i12:I12Icon16Login1 Margin="4"/>
+                        </StackPanel>
+                    </StackPanel>
+                </i12:I12TabItem1>
+                <i12:I12TabItem1 Header="I12IconButton1">
+                    <StackPanel>
+                        <Border SnapsToDevicePixels="True" Background="#FFF5F5F5" BorderBrush="#FFC8C8C8" BorderThickness="0,0,0,1">
+                            <StackPanel Orientation="Horizontal">
+                                <i12:I12Icon24Box1 VerticalAlignment="Center" Margin="12,6"/>
+                                <TextBlock VerticalAlignment="Center" Margin="0,6" FontSize="13" Text="I12IconButton1"/>
+                            </StackPanel>
+                        </Border>
+                        <StackPanel Orientation="Horizontal">
+                            <i12:I12Icon24Button1 Padding="4" Icon="{x:Static i12:I12Icon24Patient1.IconSource}" Click="I12Icon24Button1_Click1"/>
+                            <i12:I12Icon24Button1 Padding="4" Icon="{x:Static i12:I12Icon24Box1.IconSource}" Click="I12Icon24Button1_Click2"/>
+                            <i12:I12Icon24Button1 Padding="4" Icon="{x:Static i12:I12Icon24Image1.IconSource}" Click="I12Icon24Button1_Click3"/>
+                            <i12:I12Icon24Button1 Padding="4" Icon="{x:Static i12:I12Icon24Directory1.IconSource}"/>
+                            <i12:I12Icon24Button1 Padding="4" Icon="{x:Static i12:I12Icon24History1.IconSource}"/>
+                            <i12:I12Icon24Button1 Padding="4" Icon="{x:Static i12:I12Icon24Setting1.IconSource}"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <i12:I12Icon16Button1 Padding="4" Icon="{x:Static i12:I12Icon16FilterCancel1.IconSource}"/>
+                            <i12:I12Icon16Button1 Padding="4" Icon="{x:Static i12:I12Icon16Calendar1.IconSource}"/>
+                            <i12:I12Icon16Button1 Padding="4" Icon="{x:Static i12:I12Icon16Box1.IconSource}"/>
+                            <i12:I12Icon16Button1 Padding="4" Icon="{x:Static i12:I12Icon16Image1.IconSource}"/>
+                            <i12:I12Icon16Button1 Padding="4" Icon="{x:Static i12:I12Icon16Directory1.IconSource}"/>
+                            <i12:I12Icon16Button1 Padding="4" Icon="{x:Static i12:I12Icon16Reset1.IconSource}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </i12:I12TabItem1>
+                <i12:I12TabItem1 Header="I12Control">
+                    <DockPanel>
+                        <Border DockPanel.Dock="Top" SnapsToDevicePixels="True" Background="#FFF5F5F5" BorderBrush="#FFC8C8C8" BorderThickness="0,0,0,1">
+                            <StackPanel Orientation="Horizontal">
+                                <i12:I12Icon24Box1 VerticalAlignment="Center" Margin="12,6"/>
+                                <TextBlock VerticalAlignment="Center" Margin="0,6" FontSize="13" Text="I12Control"/>
+                            </StackPanel>
+                        </Border>
+                        <Border DockPanel.Dock="Left" SnapsToDevicePixels="True" Background="#FFF0F0F0" BorderBrush="#FFC8C8C8" BorderThickness="0,0,1,0" Width="200">
+                            <StackPanel>
+                                <i12:I12TextBox1 TitleWidth="55" TitleText="글자입력"/>
+                                <i12:I12DatePicker1 TitleWidth="55" TitleText="날짜선택"/>
+                            </StackPanel>
+                        </Border>
+                        <Border DockPanel.Dock="Left" SnapsToDevicePixels="True" BorderBrush="#FFC8C8C8" BorderThickness="0,0,1,0">
+
+                        </Border>
+                    </DockPanel>
+                </i12:I12TabItem1>
+            </i12:I12TabControl1>
         </DockPanel>
         <i12:I12MessageControl2/>
     </Grid>

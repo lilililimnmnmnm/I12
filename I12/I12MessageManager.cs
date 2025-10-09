@@ -77,6 +77,9 @@ namespace I12
     public partial class I12MessageControl1 : I12MessageControl
     {
         private static readonly Style style = new(typeof(I12MessageControl1));
+        private static readonly double fontSize = 13.0;
+        private static readonly Thickness padding = new(12, 6, 12, 6);
+        private static readonly Thickness borderThickness = new(0);
         private static readonly SolidColorBrush defaultBackgroundColor = new(Color.FromRgb(70, 110, 170));
         private static readonly SolidColorBrush defaultBorderColor = new(Color.FromRgb(70, 110, 170));
         private static readonly SolidColorBrush defaultForegroundColor = new(Color.FromRgb(255, 255, 255));
@@ -86,9 +89,6 @@ namespace I12
         private static readonly SolidColorBrush importantBackgroundColor = new(Color.FromRgb(50, 160, 100));
         private static readonly SolidColorBrush importantBorderColor = new(Color.FromRgb(50, 160, 100));
         private static readonly SolidColorBrush importantForegroundColor = new(Color.FromRgb(255, 255, 255));
-        private static readonly Thickness borderThickness = new(0);
-        private static readonly Thickness padding = new(12, 6, 12, 6);
-        private static readonly double fontSize = 13.0;
 
         static I12MessageControl1()
         {
@@ -104,8 +104,8 @@ namespace I12
             ControlTemplate controlTemplate = new(typeof(I12MessageControl1));
             FrameworkElementFactory border = new(typeof(Border));
             FrameworkElementFactory textBlock = new(typeof(TextBlock));
-            Trigger error = new() { Property = MessageTypeProperty, Value = I12MessageType.Error };
-            Trigger important = new() { Property = MessageTypeProperty, Value = I12MessageType.Important };
+            Trigger trigger1 = new() { Property = MessageTypeProperty, Value = I12MessageType.Error };
+            Trigger trigger2 = new() { Property = MessageTypeProperty, Value = I12MessageType.Important };
             border.SetValue(SnapsToDevicePixelsProperty, true);
             border.SetValue(Border.BackgroundProperty, new TemplateBindingExtension(BackgroundProperty));
             border.SetValue(Border.BorderBrushProperty, new TemplateBindingExtension(BorderBrushProperty));
@@ -113,12 +113,12 @@ namespace I12
             border.SetValue(Border.PaddingProperty, new TemplateBindingExtension(PaddingProperty));
             textBlock.SetValue(TextBlock.ForegroundProperty, new TemplateBindingExtension(ForegroundProperty));
             textBlock.SetValue(TextBlock.TextProperty, new TemplateBindingExtension(TextProperty));
-            error.Setters.Add(new Setter(BackgroundProperty, errorBackgroundColor));
-            error.Setters.Add(new Setter(BorderBrushProperty, errorBorderColor));
-            error.Setters.Add(new Setter(ForegroundProperty, errorForegroundColor));
-            important.Setters.Add(new Setter(BackgroundProperty, importantBackgroundColor));
-            important.Setters.Add(new Setter(BorderBrushProperty, importantBorderColor));
-            important.Setters.Add(new Setter(ForegroundProperty, importantForegroundColor));
+            trigger1.Setters.Add(new Setter(BackgroundProperty, errorBackgroundColor));
+            trigger1.Setters.Add(new Setter(BorderBrushProperty, errorBorderColor));
+            trigger1.Setters.Add(new Setter(ForegroundProperty, errorForegroundColor));
+            trigger2.Setters.Add(new Setter(BackgroundProperty, importantBackgroundColor));
+            trigger2.Setters.Add(new Setter(BorderBrushProperty, importantBorderColor));
+            trigger2.Setters.Add(new Setter(ForegroundProperty, importantForegroundColor));
             border.AppendChild(textBlock);
             controlTemplate.VisualTree = border;
             controlTemplate.Seal();
@@ -132,8 +132,8 @@ namespace I12
             style.Setters.Add(new Setter(BorderThicknessProperty, borderThickness));
             style.Setters.Add(new Setter(FontSizeProperty, fontSize));
             style.Setters.Add(new Setter(TemplateProperty, controlTemplate));
-            style.Triggers.Add(error);
-            style.Triggers.Add(important);
+            style.Triggers.Add(trigger1);
+            style.Triggers.Add(trigger2);
             style.Seal();
         }
 
@@ -167,6 +167,10 @@ namespace I12
     public partial class I12MessageControl2 : I12MessageControl
     {
         private static readonly Style style = new(typeof(I12MessageControl2));
+        private static readonly double fontSize = 14.0;
+        private static readonly Thickness padding = new(16);
+        private static readonly Thickness borderThickness = new(0);
+        private static readonly CornerRadius cornerRadius = new(4);
         private static readonly SolidColorBrush defaultBackgroundColor = new(Color.FromRgb(70, 110, 170));
         private static readonly SolidColorBrush defaultBorderColor = new(Color.FromRgb(70, 110, 170));
         private static readonly SolidColorBrush defaultForegroundColor = new(Color.FromRgb(255, 255, 255));
@@ -176,10 +180,6 @@ namespace I12
         private static readonly SolidColorBrush importantBackgroundColor = new(Color.FromRgb(50, 180, 120));
         private static readonly SolidColorBrush importantBorderColor = new(Color.FromRgb(50, 180, 120));
         private static readonly SolidColorBrush importantForegroundColor = new(Color.FromRgb(255, 255, 255));
-        private static readonly CornerRadius cornerRadius = new(4);
-        private static readonly Thickness borderThickness = new(0);
-        private static readonly Thickness padding = new(16);
-        private static readonly double fontSize = 14.0;
 
         static I12MessageControl2()
         {
@@ -195,9 +195,9 @@ namespace I12
             ControlTemplate controlTemplate = new(typeof(I12MessageControl2));
             FrameworkElementFactory border = new(typeof(Border));
             FrameworkElementFactory textBlock = new(typeof(TextBlock));
-            Trigger error = new() { Property = MessageTypeProperty, Value = I12MessageType.Error };
-            Trigger important = new() { Property = MessageTypeProperty, Value = I12MessageType.Important };
-            Trigger opacity = new() { Property = OpacityProperty, Value = 0.0 };
+            Trigger trigger1 = new() { Property = OpacityProperty, Value = 0.0 };
+            Trigger trigger2 = new() { Property = MessageTypeProperty, Value = I12MessageType.Error };
+            Trigger trigger3 = new() { Property = MessageTypeProperty, Value = I12MessageType.Important };
             border.SetValue(SnapsToDevicePixelsProperty, true);
             border.SetValue(Border.CornerRadiusProperty, cornerRadius);
             border.SetValue(Border.BackgroundProperty, new TemplateBindingExtension(BackgroundProperty));
@@ -206,13 +206,13 @@ namespace I12
             border.SetValue(Border.PaddingProperty, new TemplateBindingExtension(PaddingProperty));
             textBlock.SetValue(TextBlock.ForegroundProperty, new TemplateBindingExtension(ForegroundProperty));
             textBlock.SetValue(TextBlock.TextProperty, new TemplateBindingExtension(TextProperty));
-            error.Setters.Add(new Setter(BackgroundProperty, errorBackgroundColor));
-            error.Setters.Add(new Setter(BorderBrushProperty, errorBorderColor));
-            error.Setters.Add(new Setter(ForegroundProperty, errorForegroundColor));
-            important.Setters.Add(new Setter(BackgroundProperty, importantBackgroundColor));
-            important.Setters.Add(new Setter(BorderBrushProperty, importantBorderColor));
-            important.Setters.Add(new Setter(ForegroundProperty, importantForegroundColor));
-            opacity.Setters.Add(new Setter(IsHitTestVisibleProperty, false));
+            trigger1.Setters.Add(new Setter(IsHitTestVisibleProperty, false));
+            trigger2.Setters.Add(new Setter(BackgroundProperty, errorBackgroundColor));
+            trigger2.Setters.Add(new Setter(BorderBrushProperty, errorBorderColor));
+            trigger2.Setters.Add(new Setter(ForegroundProperty, errorForegroundColor));
+            trigger3.Setters.Add(new Setter(BackgroundProperty, importantBackgroundColor));
+            trigger3.Setters.Add(new Setter(BorderBrushProperty, importantBorderColor));
+            trigger3.Setters.Add(new Setter(ForegroundProperty, importantForegroundColor));
             border.AppendChild(textBlock);
             controlTemplate.VisualTree = border;
             controlTemplate.Seal();
@@ -230,9 +230,9 @@ namespace I12
             style.Setters.Add(new Setter(BorderThicknessProperty, borderThickness));
             style.Setters.Add(new Setter(FontSizeProperty, fontSize));
             style.Setters.Add(new Setter(TemplateProperty, controlTemplate));
-            style.Triggers.Add(error);
-            style.Triggers.Add(important);
-            style.Triggers.Add(opacity);
+            style.Triggers.Add(trigger1);
+            style.Triggers.Add(trigger2);
+            style.Triggers.Add(trigger3);
             style.Seal();
         }
 
