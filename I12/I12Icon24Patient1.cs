@@ -23,9 +23,9 @@ namespace I12
                 using (StreamGeometryContext streamGeometryContext = streamGeometry1.Open())
                 {
                     streamGeometryContext.BeginFigure(new Point(1, 18), true, true);
-                    streamGeometryContext.ArcTo(new Point(14, 18), new Size(6.5, 6.5), 0, false, SweepDirection.Clockwise, false, true);
-                    streamGeometryContext.LineTo(new Point(14, 22), false, true);
-                    streamGeometryContext.ArcTo(new Point(13, 23), new Size(1, 1), 0, false, SweepDirection.Clockwise, false, true);
+                    streamGeometryContext.ArcTo(new Point(15, 18), new Size(7, 7), 0, false, SweepDirection.Clockwise, false, true);
+                    streamGeometryContext.LineTo(new Point(15, 22), false, true);
+                    streamGeometryContext.ArcTo(new Point(14, 23), new Size(1, 1), 0, false, SweepDirection.Clockwise, false, true);
                     streamGeometryContext.LineTo(new Point(2, 23), false, true);
                     streamGeometryContext.ArcTo(new Point(1, 22), new Size(1, 1), 0, false, SweepDirection.Clockwise, false, true);
                 }
@@ -45,12 +45,12 @@ namespace I12
                     streamGeometryContext.BeginFigure(new Point(19.5, 11), false, false);
                     streamGeometryContext.LineTo(new Point(19.5, 17.5), true, true);
                     streamGeometryContext.ArcTo(new Point(15.5, 21.5), new Size(4, 4), 0, false, SweepDirection.Clockwise, true, true);
-                    streamGeometryContext.LineTo(new Point(14, 21.5), true, true);
+                    streamGeometryContext.LineTo(new Point(15, 21.5), true, true);
                 }
                 streamGeometry1.Freeze();
                 streamGeometry2.Freeze();
                 streamGeometry3.Freeze();
-                drawingContext.DrawEllipse(solidColorBrush1, null, new Point(7.5, 8), 4, 4);
+                drawingContext.DrawEllipse(solidColorBrush1, null, new Point(8, 8), 4.5, 4.5);
                 drawingContext.DrawGeometry(solidColorBrush1, null, streamGeometry1);
                 drawingContext.DrawGeometry(solidColorBrush2, null, streamGeometry2);
                 drawingContext.DrawGeometry(null, pen1, streamGeometry3);

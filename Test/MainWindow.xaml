@@ -30,7 +30,7 @@
                         <Border SnapsToDevicePixels="True" Background="#FFF5F5F5" BorderBrush="#FFC8C8C8" BorderThickness="0,0,0,1">
                             <StackPanel Orientation="Horizontal">
                                 <i12:I12Icon24Box1 VerticalAlignment="Center" Margin="12,6"/>
-                                <TextBlock VerticalAlignment="Center" Margin="0,6" FontSize="13" Text="32px Icon"/>
+                                <TextBlock VerticalAlignment="Center" Margin="0,6" FontSize="13" Text="24px Icon"/>
                             </StackPanel>
                         </Border>
                         <StackPanel Orientation="Horizontal">
@@ -107,6 +107,7 @@
                             </StackPanel>
                         </Border>
                         <StackPanel Orientation="Horizontal">
+                            <i12:I12Icon16Patient1 Margin="4"/>
                             <i12:I12Icon16FilterCancel1 Margin="4"/>
                             <i12:I12Icon16Calendar1 Margin="4"/>
                             <i12:I12Icon16Box1 Margin="4"/>

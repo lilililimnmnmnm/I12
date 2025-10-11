@@ -16,7 +16,7 @@ namespace I12
                 {
                     streamGeometryContext.BeginFigure(new Point(3, 12), true, true);
                     streamGeometryContext.ArcTo(new Point(13, 12), new Size(5, 5), 0, false, SweepDirection.Clockwise, false, true);
-                    streamGeometryContext.ArcTo(new Point(13, 13), new Size(5, 5), 0, false, SweepDirection.Clockwise, false, true);
+                    streamGeometryContext.LineTo(new Point(13, 13), false, true);
                     streamGeometryContext.ArcTo(new Point(12, 14), new Size(1, 1), 0, false, SweepDirection.Clockwise, false, true);
                     streamGeometryContext.LineTo(new Point(4, 14), false, true);
                     streamGeometryContext.ArcTo(new Point(3, 13), new Size(1, 1), 0, false, SweepDirection.Clockwise, false, true);
