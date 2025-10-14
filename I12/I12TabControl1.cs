@@ -19,11 +19,6 @@ namespace I12
             defaultBackgroundColor.Freeze();
             defaultBorderColor.Freeze();
             defaultForegroundColor.Freeze();
-            InitializeControlTemplate();
-        }
-
-        public static void InitializeControlTemplate()
-        {
             ControlTemplate controlTemplate = new(typeof(I12TabControl1));
             FrameworkElementFactory border1 = new(typeof(Border));
             FrameworkElementFactory border2 = new(typeof(Border));
@@ -82,11 +77,6 @@ namespace I12
             defaultBackgroundColor.Freeze();
             defaultBorderColor.Freeze();
             selectedBackgroundColor.Freeze();
-            InitializeStyle();
-        }
-
-        private static void InitializeStyle()
-        {
             ControlTemplate controlTemplate = new(typeof(TabItem));
             FrameworkElementFactory border = new(typeof(Border));
             FrameworkElementFactory contentPresenter = new(typeof(ContentPresenter));
