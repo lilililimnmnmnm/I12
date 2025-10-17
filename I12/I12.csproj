@@ -8,8 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Shader\OverlayContrastEffect.ps" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Shader\NegativeEffect.ps" />
     <Resource Include="Shader\AddEffect.ps" />
+    <Resource Include="Shader\OverlayContrastEffect.ps" />
   </ItemGroup>
 
 </Project>

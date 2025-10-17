@@ -1,5 +1,6 @@
 ﻿using I12;
 using System.Windows;
+using System.Windows.Media;
 
 namespace Test
 {
@@ -23,6 +24,15 @@ namespace Test
         private void I12Icon24Button1_Click3(object sender, RoutedEventArgs e)
         {
             I12MessageManager.ShowErrorMessage("[Error] My Message");
+        }
+
+        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (ColorR is not null &&
+                ColorG is not null &&
+                ColorB is not null &&
+                overlayEffect is not null)
+                overlayEffect.C0 = Color.FromArgb(255, (byte)(int)ColorR.Value, (byte)(int)ColorG.Value, (byte)(int)ColorB.Value);
         }
     }
 }

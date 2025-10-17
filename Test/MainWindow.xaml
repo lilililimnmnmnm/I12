@@ -96,6 +96,23 @@
                                 </i12s:AddEffect>
                             </Grid.Effect>
                         </Grid>
+                        <!-- Shader OverlayEffect -->
+                        <StackPanel Orientation="Horizontal" Background="#FFF0F0F0">
+                            <StackPanel.Effect>
+                                <i12s:OverlayContrastEffect x:Name="overlayEffect"/>
+                            </StackPanel.Effect>
+                            <i12:I12Icon24Patient1 Margin="4"/>
+                            <i12:I12Icon24Box1 Margin="4"/>
+                            <i12:I12Icon24Image1 Margin="4"/>
+                            <i12:I12Icon24Directory1 Margin="4"/>
+                            <i12:I12Icon24History1 Margin="4"/>
+                            <i12:I12Icon24Setting1 Margin="4"/>
+                        </StackPanel>
+                        <StackPanel HorizontalAlignment="Left">
+                            <Slider Width="200" Minimum="0" Maximum="255" Value="127" ValueChanged="Slider_ValueChanged" x:Name="ColorR"/>
+                            <Slider Width="200" Minimum="0" Maximum="255" Value="127" ValueChanged="Slider_ValueChanged" x:Name="ColorG"/>
+                            <Slider Width="200" Minimum="0" Maximum="255" Value="127" ValueChanged="Slider_ValueChanged" x:Name="ColorB"/>
+                        </StackPanel>
                     </StackPanel>
                 </i12:I12TabItem1>
                 <i12:I12TabItem1 Header="16px Icon">
