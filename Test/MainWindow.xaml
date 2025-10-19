@@ -132,6 +132,9 @@
                             <i12:I12Icon16Directory1 Margin="4"/>
                             <i12:I12Icon16Reset1 Margin="4"/>
                             <i12:I12Icon16Warning1 Margin="4"/>
+                            <i12:I12Icon16Information1 Margin="4"/>
+                            <i12:I12Icon16Tag1 Margin="4"/>
+                            <i12:I12Icon16Contrast1 Margin="4"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Background="#FF323232">
                             <i12:I12Icon16User1 Margin="4"/>
