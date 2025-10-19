@@ -24,7 +24,9 @@ namespace I12
 
         protected override void OnRender(DrawingContext drawingContext)
         {
+            drawingContext.PushClip(new RectangleGeometry(new Rect(0, 0, ActualWidth, ActualHeight)));
             drawingContext.DrawDrawing(Icon);
+            drawingContext.Pop();
         }
     }
 
