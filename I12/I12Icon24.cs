@@ -6,7 +6,7 @@ namespace I12
     public class I12Icon24 : FrameworkElement
     {
         private static readonly DrawingGroup drawingGroup = new();
-
+        private static readonly Size size = new(24, 24);
         static I12Icon24()
         {
             drawingGroup.Freeze();
@@ -15,11 +15,9 @@ namespace I12
         public static readonly DependencyProperty IconProperty = DependencyProperty.Register(nameof(Icon), typeof(DrawingGroup), typeof(I12Icon24), new FrameworkPropertyMetadata(drawingGroup, FrameworkPropertyMetadataOptions.AffectsRender));
         public DrawingGroup Icon { get => (DrawingGroup)GetValue(IconProperty); set => SetValue(IconProperty, value); }
 
-        public I12Icon24() : base()
+        protected override Size MeasureOverride(Size availableSize)
         {
-            SnapsToDevicePixels = true;
-            Width = 24;
-            Height = 24;
+            return size;
         }
 
         protected override void OnRender(DrawingContext drawingContext)
