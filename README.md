@@ -60,16 +60,16 @@
 
 ## 실행화면
 
-![실행화면](./Image/image1.png)
+![실행화면](https://github.com/lilililimnmnmnm/I12/blob/master/Image/Image1.png)
 
 ### 예제화면1
 
-![예제화면1](./Image/image2.png)
+![예제화면1](https://github.com/lilililimnmnmnm/I12/blob/master/Image/Image2.png)
 
 ### 예제화면2
 
-![예제화면2](./Image/image3.png)
+![예제화면2](https://github.com/lilililimnmnmnm/I12/blob/master/Image/Image3.png)
 
 ### 예제화면3
 
-![예제화면3](./Image/image4.png)
+![예제화면3](https://github.com/lilililimnmnmnm/I12/blob/master/Image/Image4.png)
